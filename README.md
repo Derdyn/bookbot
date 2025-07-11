@@ -1,2 +1,3 @@
 # bookbot
-Learning on boot.dev. This is bookbot.
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
