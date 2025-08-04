@@ -6,7 +6,7 @@ def word_count():
 def char_count():
     count = {}
     with open("./books/frankenstein.txt") as b:
-        book = b.read()
+        book = b.read().lower()
         for char in book:
             count[char] = count.get(char, 0) +1
-    return count
+    return count 
