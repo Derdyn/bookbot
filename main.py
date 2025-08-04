@@ -1,4 +1,5 @@
 from stats import word_count
+from stats import char_count
 
 def get_book_text(path):
     with open(path) as f:
@@ -12,3 +13,4 @@ def main():
 
 main()
 word_count()
+char_count = char_count()
