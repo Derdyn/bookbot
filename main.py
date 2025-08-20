@@ -14,3 +14,4 @@ def main():
 main()
 word_count()
 char_count = char_count()
+print(char_count)
