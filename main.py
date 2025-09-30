@@ -1,3 +1,4 @@
+import sys
 from stats import (
 word_count,
 char_count,
@@ -10,12 +11,18 @@ def get_book_text(path):
     return get_contents
 
 def main():
-    book = "./books/frankenstein.txt"
-    text = get_book_text(book)
-    count = word_count(text)
-    chars = char_count(text)
-    sorted = sort_count(chars)
-    print_report(book, count, sorted)
+    try:
+       not sys.argv[1]
+    except:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    else:
+        book = sys.argv[1]
+        text = get_book_text(book)
+        count = word_count(text)
+        chars = char_count(text)
+        sorted = sort_count(chars)
+        print_report(book, count, sorted)
 
 def print_report(text, count, sorted):
     print("============ BOOKBOT ============")
